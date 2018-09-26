@@ -1,0 +1,7 @@
+sparksql案例，都在SparkTest项目中：
+创建 cn/edu360/day6/SQLDemo1 类，使用SparkSQL 1.x 的 API 操作sql；
+---
+创建 cn.edu360.day6.SQLTest1 类，使用SparkSQL 2.x 的 API 操作sql；
+---
+创建 cn.edu360.day6.SQLWordCount类，使用SparkSQL 2.x写 WordCount；
+---
