@@ -31,6 +31,12 @@
             <artifactId>spark-core_2.11</artifactId>
             <version>${spark.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.7.3</version>
+        </dependency>
 
         <!-- 指定hadoop-client API的版本，进行hdfs操作-->
         <dependency>

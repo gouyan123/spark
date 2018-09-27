@@ -1,7 +1,21 @@
+SparkSQL 2.x使用DataSet，DataFrame，不使用RDD了；DataFrame = RDD + Schema；DataSet是对RDD的封装，可以转换为DataFrame，只有一列；DataFrame与DataSet关系？？？
+---
 sparksql案例，都在SparkTest项目中：
 创建 cn/edu360/day6/SQLDemo1 类，使用SparkSQL 1.x 的 API 操作sql；
 ---
 创建 cn.edu360.day6.SQLTest1 类，使用SparkSQL 2.x 的 API 操作sql；
 ---
-创建 cn.edu360.day6.SQLWordCount类，使用SparkSQL 2.x写 WordCount；
+创建 cn.edu360.day6.SQLWordCount类，使用 Dataset的 sql写 WordCount；
+DataSet只有一列；里面有执行计划，会从多个可行方案中选一个最优的；
+show()方法本质，将计算任务下发到集群，集群各节点计算完成后，将结果收集回来
 ---
+创建 cn.edu360.day6.DataSetWordCount，使用 Dataset的 API写 WordCount；
+DataSet只有一列；里面有执行计划，会从多个可行方案中选一个最优的；
+show()方法本质，将计算任务下发到集群，集群各节点计算完成后，将结果收集回来
+---
+小结：SparkSQL 2.x和Dataset必须会；DataSet里面有执行计划，会从多个可行方案中选一个最优的；
+---
+创建 cn.edu360.day7.JoinTest，使用 DataSet进行 join操作；
+------------------------------------------------------
+spark读取多种类型数据源：spark.read.format("jdbc").options()
+创建 cn.edu360.day7.JdbcDataSource，读取jdbc中数据；
