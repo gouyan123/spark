@@ -2,13 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe1d8a93-d5d6-4a2e-8590-f2b9425b90c5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/compiler(1).xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/dictionaries/zx(1).xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__com_101tec_zkclient_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__com_yammer_metrics_metrics_core_2_2_0(1).xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__io_netty_netty_3_7_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__log4j_log4j_1_2_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__net_jpountz_lz4_lz4_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_0_8_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_apache_kafka_kafka_clients_0_8_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_11_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ConsumerDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ProducerDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SparkTest/note/sparksql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/note/sparksql.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/JsonDataSource.scala" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/JsonDataSource.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/ParquetDataSource.scala" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/ParquetDataSource.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day10/Constant(1).scala" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day10/Constant.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day9/SteamingWordCount.scala" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day9/SteamingWordCount.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day10/Constant$.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day10/Constant$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day10/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day10/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day7/JsonDataSource$.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day7/JsonDataSource$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day7/ParquetDataSource$.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day7/ParquetDataSource$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$.class" beforeDir="false" afterPath="$PROJECT_DIR$/SparkTest/target/classes/cn/edu360/day9/SteamingWordCount$.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/SparkTest/target/" />
     <ignored path="$PROJECT_DIR$/streamingkafka10/target/" />
+    <ignored path="$PROJECT_DIR$/Kafka/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,17 +61,17 @@
       <file leaf-file-name="sparksql.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SparkTest/note/sparksql.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="557">
+              <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParquetDataSource.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/ParquetDataSource.scala">
+      <file leaf-file-name="SteamingWordCount.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day9/SteamingWordCount.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="410">
+              <caret line="12" column="84" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -63,6 +103,11 @@
         <option value="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/JdbcDataSource.scala" />
         <option value="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/JsonDataSource.scala" />
         <option value="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/ParquetDataSource.scala" />
+        <option value="$PROJECT_DIR$/Kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/Kafka/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ConsumerDemo.java" />
+        <option value="$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ProducerDemo.java" />
+        <option value="$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day9/SteamingWordCount.scala" />
         <option value="$PROJECT_DIR$/SparkTest/note/sparksql.txt" />
       </list>
     </option>
@@ -90,8 +135,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1040" />
     <option name="height" value="744" />
   </component>
@@ -103,9 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,12 +165,6 @@
               <item name="spark" type="b2602c69:ProjectViewProjectNode" />
               <item name="spark" type="462c0819:PsiDirectoryNode" />
               <item name="SparkTest" type="462c0819:PsiDirectoryNode" />
-              <item name="note" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark" type="462c0819:PsiDirectoryNode" />
-              <item name="SparkTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -143,16 +180,7 @@
               <item name="SparkTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spark" type="462c0819:PsiDirectoryNode" />
-              <item name="SparkTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu360" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spark" type="b2602c69:ProjectViewProjectNode" />
@@ -179,24 +207,32 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="edu360" type="462c0819:PsiDirectoryNode" />
-              <item name="day7" type="462c0819:PsiDirectoryNode" />
+              <item name="day9" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../general" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaProject\spark\Kafka\src\main\resources" />
+      <recent name="D:\ideaProject\spark\SparkTest\note" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -210,7 +246,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JdbcDataSource">
+  <component name="RunManager" selected="Application.SteamingWordCount">
+    <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu360.kafka.ConsumerDemo" />
+      <module name="Kafka" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu360.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.edu360.day6.Demo" />
       <module name="SparkTest" />
@@ -233,27 +280,24 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="JoinTest" type="Application" factoryName="Application" temporary="true">
-      <envs>
-        <env name="HADOOP_OPTS" value="-Djava.library.path=${HADOOP_HOME}/lib/native" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="cn.edu360.day7.JoinTest" />
-      <module name="SparkTest" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <configuration name="ProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu360.kafka.ProducerDemo" />
+      <module name="Kafka" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu360.day7.*" />
+          <option name="PATTERN" value="cn.edu360.kafka.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SQLWordCount" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="cn.edu360.day6.SQLWordCount" />
+    <configuration name="SteamingWordCount" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu360.day9.SteamingWordCount" />
       <module name="SparkTest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.edu360.day6.*" />
+          <option name="PATTERN" value="cn.edu360.day9.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -276,12 +320,6 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
-    </configuration>
-    <configuration name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
-      <module name="streaming-kafka10" />
-      <setting name="vmparams4" value="-Djline.terminal=NONE" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="consoleArgs" value="-usejavacp" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -306,19 +344,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.SQLWordCount" />
-      <item itemvalue="Application.JoinTest" />
-      <item itemvalue="Scala Console.Scala Console" />
       <item itemvalue="Application.Demo" />
       <item itemvalue="Application.JdbcDataSource" />
+      <item itemvalue="Application.ProducerDemo" />
+      <item itemvalue="Application.ConsumerDemo" />
+      <item itemvalue="Application.SteamingWordCount" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SteamingWordCount" />
+        <item itemvalue="Application.ProducerDemo" />
+        <item itemvalue="Application.ConsumerDemo" />
         <item itemvalue="Application.JdbcDataSource" />
         <item itemvalue="Application.Demo" />
-        <item itemvalue="Application.JoinTest" />
-        <item itemvalue="Scala Console.Scala Console" />
-        <item itemvalue="Application.SQLWordCount" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +372,8 @@
       <updated>1537945541405</updated>
       <workItem from="1537945544681" duration="11418000" />
       <workItem from="1538010119181" duration="6197000" />
-      <workItem from="1538019690076" duration="12205000" />
+      <workItem from="1538019690076" duration="15494000" />
+      <workItem from="1538096709993" duration="8551000" />
     </task>
     <task id="LOCAL-00001" summary="gx">
       <created>1538031869695</created>
@@ -350,15 +389,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538036971678</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gx">
+      <created>1538039976048</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1538039976048</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29820000" />
+    <option name="totallyTimeSpent" value="41660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -375,7 +420,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32941177" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25375536" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -403,6 +448,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="gx" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SparkTest/note/sparksql.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1189">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/ParquetDataSource.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ProducerDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ConsumerDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SparkTest/note/sparksql.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -499,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SparkTest/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day6/SQLTest1.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1968">
@@ -513,13 +586,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day6/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day6/Demo.java" />
     <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/JoinTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
@@ -538,23 +605,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="51" column="66" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="66" />
-          <folding>
-            <element signature="e#24#51#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day8/HiveOnSpark.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day7/ParquetDataSource.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/mavenRepository/org/apache/kafka/kafka_2.11/0.8.2.2/kafka_2.11-0.8.2.2.jar!/kafka/producer/ProducerConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ConsumerDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kafka/src/main/java/cn/edu360/kafka/ProducerDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkTest/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1010">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkTest/src/main/scala/cn/edu360/day9/SteamingWordCount.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="12" column="84" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SparkTest/note/sparksql.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="557">
+          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -611,11 +731,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>streaming-kafka10</last-edited>
+          <last-edited>Kafka</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

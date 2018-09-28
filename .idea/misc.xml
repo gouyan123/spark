@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/SparkTest/pom.xml" />
         <option value="$PROJECT_DIR$/streamingkafka10/pom.xml" />
+        <option value="$PROJECT_DIR$/Kafka/pom.xml" />
       </list>
     </option>
   </component>

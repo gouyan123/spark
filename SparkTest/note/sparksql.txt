@@ -29,3 +29,4 @@ parquet是一种特殊的文件格式，不仅用parquet存储，还用snappy压
 真正读取 parquet文件时，只读取 select语句中要的 name，fv字段；
 如图 parquet文件详解.png；
 ---
+创建 cn.edu360.day9.SteamingWordCount，使用 spark streaming实现 实时wordcount；

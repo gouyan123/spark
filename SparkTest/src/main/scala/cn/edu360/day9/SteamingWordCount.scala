@@ -4,9 +4,6 @@ import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 import org.apache.spark.streaming.{Milliseconds, StreamingContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
-/**
-  * Created by zx on 2017/10/17.
-  */
 object SteamingWordCount {
 
   def main(args: Array[String]): Unit = {
@@ -20,10 +17,10 @@ object SteamingWordCount {
     val ssc = new StreamingContext(sc, Milliseconds(5000))
 
     //有了StreamingContext，就可以创建SparkStreaming的抽象了DSteam
-    //从一个socket端口中读取数据
-    //在Linux上用yum安装nc
+    //从一个socket端口中读取数据，即从 172.17.1.247:8888中读取数据
+    //在Linux上用yum安装nc；nc即 socketserver程序，在Linux网络上功能强大
     //yum install -y nc
-    val lines: ReceiverInputDStream[String] = ssc.socketTextStream("192.168.1.207", 8888)
+    val lines: ReceiverInputDStream[String] = ssc.socketTextStream("172.17.1.247", 8888)
     //对DSteam进行操作，你操作这个抽象（代理，描述），就像操作一个本地的集合一样
     //切分压平
     val words: DStream[String] = lines.flatMap(_.split(" "))
@@ -31,14 +28,12 @@ object SteamingWordCount {
     val wordAndOne: DStream[(String, Int)] = words.map((_, 1))
     //聚合
     val reduced: DStream[(String, Int)] = wordAndOne.reduceByKey(_+_)
-    //打印结果(Action)
+    //打印结果(print()是Action算子)
     reduced.print()
 
     //启动sparksteaming程序
     ssc.start()
-    //等待优雅的退出
+    //等待优雅的退出：不再执行新的，但是要把正在执行的执行完成；等待优雅退出的信号，并在退出前进行收尾工作； ctr + c 属于优雅退出；
     ssc.awaitTermination()
-
-
   }
 }
