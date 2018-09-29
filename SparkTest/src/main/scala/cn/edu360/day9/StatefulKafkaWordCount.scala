@@ -5,17 +5,15 @@ import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
-/**
-  * Created by zx on 2017/10/17.
-  */
 object StatefulKafkaWordCount {
 
   /**
     * 第一个参数：聚合的key，就是单词
-    * 第二个参数：当前批次产生批次该单词在每一个分区出现的次数
-    * 第三个参数：初始值或累加的中间结果
+    * 第二个参数：int：当前批次 该单词在每一个分区出现的次数；Seq[Int]：全局 该单词出现次数；
+    * 第三个参数：初始值或累加的中间 结果；中间结果保存在checkpoint，避免中间结果丢失；
     */
   val updateFunc = (iter: Iterator[(String, Seq[Int], Option[Int])]) => {
+    //            当前批次  累计历史
     //iter.map(t => (t._1, t._2.sum + t._3.getOrElse(0)))
     iter.map{ case(x, y, z) => (x, y.sum + z.getOrElse(0))}
   }
@@ -26,7 +24,7 @@ object StatefulKafkaWordCount {
 
     val ssc = new StreamingContext(conf, Seconds(5))
 
-    //如果要使用课更新历史数据（累加），那么就要把终结结果保存起来
+    //如果要使用课更新历史数据（累加），那么就要把中间结果保存起来
     ssc.checkpoint("./ck")
 
     val zkQuorum = "node-1:2181,node-2:2181,node-3:2181"
@@ -43,7 +41,7 @@ object StatefulKafkaWordCount {
     val words: DStream[String] = lines.flatMap(_.split(" "))
     //单词和一组合在一起
     val wordAndOne: DStream[(String, Int)] = words.map((_, 1))
-    //聚合
+    /**聚合：使用 状态；updateFunc()表示转换函数*/
     val reduced: DStream[(String, Int)] = wordAndOne.updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
     //打印结果(Action)
     reduced.print()
