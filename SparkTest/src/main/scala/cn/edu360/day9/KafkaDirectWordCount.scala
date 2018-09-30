@@ -10,14 +10,11 @@ import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.kafka.{HasOffsetRanges, KafkaUtils, OffsetRange}
 import org.apache.spark.streaming.{Duration, StreamingContext}
 
-/**
-  * Created by zx on 2017/7/31.
-  */
 object KafkaDirectWordCount {
 
   def main(args: Array[String]): Unit = {
 
-    //指定组名
+    //指定组名，使用 组名 + topic共同定义偏移量
     val group = "g001"
     //创建SparkConf
     val conf = new SparkConf().setAppName("KafkaDirectWordCount").setMaster("local[2]")
@@ -35,23 +32,23 @@ object KafkaDirectWordCount {
 
     //创建一个 ZKGroupTopicDirs 对象,其实是指定往zk中写入数据的目录，用于保存偏移量
     val topicDirs = new ZKGroupTopicDirs(group, topic)
-    //获取 zookeeper 中的路径 "/g001/offsets/wordcount/"
+    //获取 zookeeper 中的路径 "/g001/offsets/wordcount/"；路径结构：组名 + offsets + topic名
     val zkTopicPath = s"${topicDirs.consumerOffsetDir}"
 
     //准备kafka的参数
     val kafkaParams = Map(
-      "metadata.broker.list" -> brokerList,
-      "group.id" -> group,
-      //从头开始读取数据
+      "metadata.broker.list" -> brokerList,     /*从这个地址读取数据*/
+      "group.id" -> group,                      /*多个消费者在同一个组里，不允许重复消费数据*/
+      //如果以前没读过，从头开始读取数据
       "auto.offset.reset" -> kafka.api.OffsetRequest.SmallestTimeString
     )
 
     //zookeeper 的host 和 ip，创建一个 client,用于跟新偏移量量的
-    //是zookeeper的客户端，可以从zk中读取偏移量数据，并更新偏移量
+    //是zookeeper的客户端，从zk中读取偏移量数据，并保存更新偏移量
     val zkClient = new ZkClient(zkQuorum)
 
-    //查询该路径下是否字节点（默认有字节点为我们自己保存不同 partition 时生成的）
-    // /g001/offsets/wordcount/0/10001"
+    //查询该路径下是否有子节点（默认有子节点为我们自己保存不同 partition 时生成的）
+    // /g001/offsets/wordcount/0/10001"   0 代表0号分区，10001代表偏移量
     // /g001/offsets/wordcount/1/30001"
     // /g001/offsets/wordcount/2/10001"
     //zkTopicPath  -> /g001/offsets/wordcount/
@@ -59,20 +56,20 @@ object KafkaDirectWordCount {
 
     var kafkaStream: InputDStream[(String, String)] = null
 
-    //如果 zookeeper 中有保存 offset，我们会利用这个 offset 作为 kafkaStream 的起始位置
+    //如果 zookeeper 中有保存 offset，我们会利用这个 offset 作为 kafkaStream 的起始位置；创建 Map，保存 分区和该分区偏移量
     var fromOffsets: Map[TopicAndPartition, Long] = Map()
 
-    //如果保存过 offset
+    //children > 0表示以前读过，并将偏移量记录到zookeeper里面了，children表示分区数量；如果保存过 offset
     if (children > 0) {
       for (i <- 0 until children) {
         // /g001/offsets/wordcount/0/10001
 
-        // /g001/offsets/wordcount/0
+        // /g001/offsets/wordcount/0 将 组 + offsets + topic名 + x号分区 组合起来，来读取里面的偏移量
         val partitionOffset = zkClient.readData[String](s"$zkTopicPath/${i}")
-        // wordcount/0
+        // wordcount/0；TopicAndPartition(topic, i)将主题和分区组合在一起；
         val tp = TopicAndPartition(topic, i)
         //将不同 partition 对应的 offset 增加到 fromOffsets 中
-        // wordcount/0 -> 10001
+        // wordcount/0 -> 10001，将 tp -> partitionOffset.toLong存入fromOffsets这个map中
         fromOffsets += (tp -> partitionOffset.toLong)
       }
       //Key: kafka的key   values: "hello tom hello jerry"
@@ -92,18 +89,20 @@ object KafkaDirectWordCount {
     var offsetRanges = Array[OffsetRange]()
 
     //从kafka读取的消息，DStream的Transform方法可以将当前批次的RDD获取出来
-    //该transform方法计算获取到当前批次RDD,然后将RDD的偏移量取出来，然后在将RDD返回到DStream
+    //该transform方法计算获取到当前批次RDD,然后将RDD的偏移量取出来，然后再将RDD返回到DStream
+    //transform一般不用，使用KafkaDirectWordCountV2进行改进；
     val transform: DStream[(String, String)] = kafkaStream.transform { rdd =>
       //得到该 rdd 对应 kafka 的消息的 offset
-      //该RDD是一个KafkaRDD，可以获得偏移量的范围
+      //该RDD是一个KafkaRDD，可以获得偏移量的范围；rdd.asInstanceOf[HasOffsetRanges]表示将rdd强转换为HasOffsetRanges，然后获取offsetRanges；
+      //HasOffsetRanges是一个接口，只有KafkaRDD实现了这个特质；
       offsetRanges = rdd.asInstanceOf[HasOffsetRanges].offsetRanges
-      rdd
+      rdd   /*将rdd转换为HasOffsetRanges，只是从里面拿offsetRanges，然后就再将rdd原封不动放回DStream*/
     }
-    val messages: DStream[String] = transform.map(_._2)
+    val messages: DStream[String] = transform.map(_._2)   //DStream每隔一段时间就生成一个RDD；
 
-    //依次迭代DStream中的RDD
+    //依次迭代DStream中的RDD；DStream不停生成RDD，foreachRDD要不停将RDD拿出来进行操作，一个时间点 对应 一个RDD；
     messages.foreachRDD { rdd =>
-      //对RDD进行操作，触发Action
+      //对RDD进行操作，触发Action；一批次的RDD；rdd.foreachPartition(...)触发RDD的action；
       rdd.foreachPartition(partition =>
         partition.foreach(x => {
           println(x)
@@ -114,19 +113,11 @@ object KafkaDirectWordCount {
         //  /g001/offsets/wordcount/0
         val zkPath = s"${topicDirs.consumerOffsetDir}/${o.partition}"
         //将该 partition 的 offset 保存到 zookeeper
-        //  /g001/offsets/wordcount/0/20000
+        //  /g001/offsets/wordcount/0/20000；o.untilOffset.toString代表结束时的偏移量；
         ZkUtils.updatePersistentPath(zkClient, zkPath, o.untilOffset.toString)
       }
     }
-
     ssc.start()
     ssc.awaitTermination()
-
   }
-
-
-
-
-
-
 }

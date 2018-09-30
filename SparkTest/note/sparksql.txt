@@ -37,4 +37,11 @@ parquet是一种特殊的文件格式，不仅用parquet存储，还用snappy压
 创建 cn.edu360.day9.StatefulKafkaWordCount，实现 更新状态累加的WordCount；存在问题，程序退出后，中间结果都丢了；用这这个 updateFunc方法比较少，一般把数据
 累计结果保存到 redis里面；
 ---
-写一个生产级别的程序，会记录偏移量，保证数据只被消费一次；
+写一个生产级别的程序，会记录偏移量，保证数据只被消费一次；使用 Direct Approach方式，RDD的一个分区直接连到 kafka的一个分区，通过迭代器拉取kafka分区数据，来一条
+拉一条，一直在不停处理，但是一段时间作为一个批次；
+---
+创建 cn.edu360.day9.KafkaDirectWordCount，使用 直连模式读取kafka数据；使用 组名 + topic共同定义偏移量；
+这个代码不用会写，理解之后，会改就行；
+---
+创建 cn.edu360.day9.KafkaDirectWordCountV2，对直连模式KafkaDirectWordCount进行改造；
+---
