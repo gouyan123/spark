@@ -4,13 +4,10 @@ import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.StreamingContext
 
-/**
-  * Created by zx on 2017/10/20.
-  */
 object IPUtils {
 
   def broadcastIpRules(ssc: StreamingContext, ipRulesPath: String): Broadcast[Array[(Long, Long, String)]] = {
-    //现获取sparkContext
+    //先获取sparkContext，来获得spark core的广播变量
     val sc = ssc.sparkContext
     val rulesLines:RDD[String] = sc.textFile(ipRulesPath)
     //整理ip规则数据

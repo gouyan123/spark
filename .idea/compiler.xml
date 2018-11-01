@@ -13,6 +13,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="monitor_24" target="1.5" />
+      <module name="report" target="1.5" />
       <module name="SparkTest (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>

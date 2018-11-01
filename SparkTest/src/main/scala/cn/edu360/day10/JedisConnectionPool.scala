@@ -2,11 +2,7 @@ package cn.edu360.day10
 
 import redis.clients.jedis.Jedis
 
-/**
-  * Created by zx on 2017/10/20.
-  */
 import redis.clients.jedis.{Jedis, JedisPool, JedisPoolConfig}
-
 
 object JedisConnectionPool{
 

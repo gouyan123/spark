@@ -39,11 +39,11 @@
         </dependency>
 
         <!-- 指定hadoop-client API的版本，进行hdfs操作-->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
             <version>${hadoop.version}</version>
-        </dependency>
+        </dependency>-->
 
         <!-- 导入spark sql的依赖 -->
         <dependency>

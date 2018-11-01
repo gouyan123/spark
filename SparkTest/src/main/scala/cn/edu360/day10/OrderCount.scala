@@ -14,9 +14,6 @@ import org.apache.spark.streaming.dstream.InputDStream
 import org.apache.spark.streaming.kafka.{HasOffsetRanges, KafkaUtils, OffsetRange}
 import org.apache.spark.streaming.{Duration, StreamingContext}
 
-/**
-  * Created by zx on 2017/7/31.
-  */
 object OrderCount {
 
   def main(args: Array[String]): Unit = {
@@ -27,7 +24,7 @@ object OrderCount {
     val conf = new SparkConf().setAppName("OrderCount").setMaster("local[4]")
     //创建SparkStreaming，并设置间隔时间
     val ssc = new StreamingContext(conf, Duration(5000))
-
+    /*获取ip规则，然后广播；传ssc是为了获取sparkcontext[ssc.sparkContext]，然后获取广播变量来广播IP规则；*/
     val broadcastRef = IPUtils.broadcastIpRules(ssc, "/Users/zx/Desktop/temp/spark-24/spark-4/ip/ip.txt")
 
 
@@ -109,25 +106,26 @@ object OrderCount {
     //如果使用直连方式累加数据，那么就要在外部的数据库中进行累加（用KeyVlaue的内存数据库（NoSQL），Redis）
     //kafkaStream.foreachRDD里面的业务逻辑是在Driver端执行
     kafkaStream.foreachRDD { kafkaRDD =>
-      //判断当前的kafkaStream中的RDD是否有数据
+      //判断当前的kafkaStream中的RDD是否有数据；注意RDD里面存数据，只存数据描述，但是可以简单理解为RDD里面有数据；
       if(!kafkaRDD.isEmpty()) {
         //只有KafkaRDD可以强转成HasOffsetRanges，并获取到偏移量
         offsetRanges = kafkaRDD.asInstanceOf[HasOffsetRanges].offsetRanges
-        val lines: RDD[String] = kafkaRDD.map(_._2)
+        val lines: RDD[String] = kafkaRDD.map(_._2)  //kafkaRDD.map(_._2)表示kafkaRDD调用map(_._2)方法，map方法里面传函数_._2，这个_._2函数在executor执行
 
         //整理数据
         val fields: RDD[Array[String]] = lines.map(_.split(" "))
 
-        //计算成交总金额
+        //计算成交总金额；calculateIncome(fields)这个方法在哪里执行？；calculateIncome()方法要处理RDD，因此传fields；
         CalculateUtil.calculateIncome(fields)
 
         //计算商品分类金额
         CalculateUtil.calculateItem(fields)
 
-        //计算区域成交金额
+        /*计算区域成交金额：根据 IP地址找归属地，意味着每条数据都要找到IP规则，然后将IP规则广播出去，SparkStreaming运行在SpringCore之上，core里面的广播变量
+        也能获取到，因此可以广播；但是首先要获取 IP规则*/
         CalculateUtil.calculateZone(fields, broadcastRef)
 
-        //偏移量跟新在哪一端（）
+        //偏移量更新在哪一端（）
         for (o <- offsetRanges) {
           //  /g001/offsets/wordcount/0
           val zkPath = s"${topicDirs.consumerOffsetDir}/${o.partition}"
@@ -137,11 +135,7 @@ object OrderCount {
         }
       }
     }
-
     ssc.start()
     ssc.awaitTermination()
-
   }
-
-
 }

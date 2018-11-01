@@ -12,7 +12,7 @@ import kafka.javaapi.consumer.ConsumerConnector;
 import kafka.message.MessageAndMetadata;
 
 public class ConsumerDemo {
-	private static final String topic = "xiaoniu";
+	private static final String topic = "gy";
 	private static final Integer threads = 2;
 
 	public static void main(String[] args) {
