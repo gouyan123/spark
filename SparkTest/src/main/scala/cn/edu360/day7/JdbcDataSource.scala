@@ -24,7 +24,7 @@ object JdbcDataSource {
     logs.show()
     /*过滤：r 代表每一行，但是 filter()里面写函数，有点复杂，不推荐*/
     val filtered: Dataset[Row] = logs.filter(r => {
-      r.getAs[Int]("age") <= 13
+      r.getAs[Int]("age") <= 130
     })
     filtered.show()
 
