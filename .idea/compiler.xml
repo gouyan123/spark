@@ -7,12 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Kafka" />
-        <module name="spark" />
+        <module name="MLlib" />
         <module name="SparkTest" />
-        <module name="streaming-kafka10" />
+        <module name="streamingkafka10" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MLlib" target="1.8" />
       <module name="monitor_24" target="1.5" />
       <module name="report" target="1.5" />
       <module name="SparkTest (1)" target="1.8" />

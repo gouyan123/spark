@@ -1,7 +1,6 @@
 package cn.edu360.day3
 
 import java.net.URL
-
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 

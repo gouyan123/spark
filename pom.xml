@@ -6,9 +6,16 @@
 
   <groupId>com.gouyan</groupId>
   <artifactId>spark</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>MLlib</module>
+      <module>MLlib</module>
+      <module>MLlib</module>
+        <module>MLlib</module>
+    </modules>
 
-  <name>spark</name>
+    <name>spark</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
